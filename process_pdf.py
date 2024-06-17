@@ -6,7 +6,7 @@ def replace_consecutive_spaces(text):
     return re.sub(r'\s{2,}', ' ', text)
 
 
-pdf = pdfplumber.open('220517_OIR_NP_PlanEstrategico_es.pdf')
+pdf = pdfplumber.open('strategy.pdf')
 
 print(len(pdf.pages))
 
@@ -18,7 +18,7 @@ for i in range(len(pdf.pages)):
 
 print(text)
 
-file_path = 'estrategia.md'
+file_path = 'strategy.md'
 
 # Writing to the file
 with open(file_path, 'w') as file:
